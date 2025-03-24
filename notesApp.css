@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(to right, lightgreen, lightyellow);/* to give multicolor background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.heading {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 70px;
+    font-style: italic;
+    font-weight: 800;
+    color:slateblue;
+}
+.info-text {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-bottom: 30px;
+    color:slateblue;
+}
+.app {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);/* to auto fill each grid with 300px max-size, exceeding that, we get the next item to fill the next grid */
+    gap: 30px;
+    justify-content: center; /* to make all the notes grids come to the center of the screen */
+}
+.note {
+    padding: 15px;
+    border-radius: 10px;
+    resize: none;/* <textarea> gives a feature to resize pads which we don't need, so wwe remove it */
+    color: slateblue;
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+    background: rgba(255, 255, 255, 0.35);
+    outline: none;
+}
+.note::placeholder {
+    color: grey;
+    opacity: 60%;
+}
+.note:hover,.note:focus { /* focus means when the note is clicked */
+    box-shadow: rgba(0, 0, 0, 0.65) 0px 8px 19px;
+    background: rgba(255, 255, 255, 0.45);
+    transition: all 300ms ease;
+}
+.btn {
+    box-shadow: rgba(0, 0, 0, 0.55) 0px 5px 15px;
+    background: rgba(255, 255, 255, 0.55);
+    outline: none;
+    border: none;
+    padding: 60px;
+    border-radius: 10px;
+    font-size: 60px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.45);
+}
+.btn:hover,.btn:focus { /* focus means when the note is clicked */
+    box-shadow: rgba(0, 0, 0, 0.65) 0px 8px 19px;
+    background: rgba(255, 255, 255, 0.75);
+    transition: all 300ms ease;
+}
